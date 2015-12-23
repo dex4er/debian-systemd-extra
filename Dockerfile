@@ -29,6 +29,7 @@ RUN set -ex; \
         ckermit \
         debconf-utils \
         dnsutils \
+        git \
         htop \
         links \
         lsof \
