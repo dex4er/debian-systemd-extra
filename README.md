@@ -1,6 +1,6 @@
 # dex4er/debian-systemd-extra
 
-A very small Docker image based on Debian with systemd
+A Docker image based on Debian with systemd intended to interactive work
 
 ## Usage
 
