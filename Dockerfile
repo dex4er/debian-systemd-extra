@@ -8,16 +8,6 @@ ENV container=docker \
 RUN set -ex; \
     apt-get upgrade; \
     \
-    echo "locales locales/locales_to_be_generated multiselect pl_PL.UTF-8 UTF-8" | debconf-set-selections; \
-    echo "locales locales/default_environment_locale select pl_PL.UTF-8" | debconf-set-selections; \
-    dpkg-reconfigure locales; \
-    \
-    echo "Europe/Warsaw" > /etc/timezone; \
-    dpkg-reconfigure tzdata; \
-    \
-    apt-get install command-not-found; \
-    update-command-not-found; \
-    \
     apt-get install \
         ansible \
         aptitude \
@@ -25,6 +15,7 @@ RUN set -ex; \
         bzip2 \
         byobu \
         ca-certificates \
+        command-not-found \
         curl \
         ckermit \
         debconf-utils \
@@ -56,6 +47,8 @@ RUN set -ex; \
     \
     rm -f /etc/ssh/*_key*; \
     systemctl disable ssh; \
+    \
+    update-command-not-found; \
     \
     rm -f /usr/sbin/policy-rc.d
 
