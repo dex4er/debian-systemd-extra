@@ -42,6 +42,7 @@ RUN set -ex; \
         tcpdump \
         telnet \
         wget \
+        whiptail \
         vim \
         ; \
     \
