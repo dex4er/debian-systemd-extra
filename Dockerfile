@@ -51,6 +51,8 @@ RUN set -ex; \
     \
     update-command-not-found; \
     \
+    sed -i 's/^account.*pam_nologin.so/# &/' /etc/pam.d/sshd; \
+    \
     rm -f /usr/sbin/policy-rc.d
 
 ENTRYPOINT ["/bin/systemd"]
