@@ -23,6 +23,7 @@ RUN set -ex; \
         dnsutils \
         git \
         htop \
+        less \
         links \
         lsof \
         man-db \
