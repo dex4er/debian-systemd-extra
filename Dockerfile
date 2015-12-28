@@ -10,6 +10,7 @@ RUN set -ex; \
     \
     apt-get install \
         ansible \
+        apt-utils \
         aptitude \
         bash-completion \
         bzip2 \
