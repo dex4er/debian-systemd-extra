@@ -24,6 +24,7 @@ RUN set -ex; \
         git \
         htop \
         less \
+        libnss-myhostname \
         links \
         lsof \
         man-db \
